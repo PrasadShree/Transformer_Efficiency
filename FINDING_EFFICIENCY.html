@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+  <style>
+body {
+  background-image: url('23.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+    <title>TransformerEfficiency</title>
+  <h1><b>FINDING TRANSFORMER EFFICIENCY:</b></h1>
+  <br>
+
+<script>
+function eff()
+{
+  var numOne, numTwo, efficiency;
+  numOne = parseInt(document.getElementById("Transformer_Primary_Rating_in_W").value);
+  numTwo = parseInt(document.getElementById("Transformer_Secondary_Rating_in_W").value);
+  efficiency = (numTwo/numOne)*100;
+  document.getElementById("answer").value = efficiency;
+}
+</script>
+</head>
+<body>
+
+
+  <label for="Transformer_ID"><b>Transformer ID:</b>
+  <input id="Transformer_ID" type="text" name="TransformerID" value=""placeholder="Enter Transformer_ID">
+  </label>
+  <br>
+  <br>
+  <label for="Transformer_Test Date"><b>Transformer_Test Date:</b>
+  <input id="Transformer_Test_Date" type="date" name="TransformerDate" value=""placeholder="EnterTest Date">
+  </label>
+  <br>
+  <br>
+  <label for="Transformer Rating in W"><b>Transformer Rating in W:</b>
+  <input id="Transformer_Rating_in_W" type="number" name="TransformerRating" value=""placeholder="Enter Rating in W">
+  </label>
+  <br>
+  <br>
+  <label for="Transformer Primary Rating in W"><b>Transformer Primary Rating in W:</b>
+  <input id="Transformer_Primary_Rating_in_W" type="number" name="TransformerPrimary" value=""placeholder="Enter Primary Rating in W">
+  </label>
+  <br>
+  <br>
+  <label for="Transformer Secondary  Rating in W"><b>Transformer Secondary Rating in W:</b>
+  <input id="Transformer_Secondary_Rating_in_W" type="number" name="TransformerSecondary" value=""placeholder="Enter Sec.. Rating in W">
+  <br>
+  <br>
+
+<button onclick="eff()">Calculate Efficiency</button>
+<p><b>Efficiency in %=</b>  <input id="answer" name="answer"></p>
+
+</body>
+</html>
